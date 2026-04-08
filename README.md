@@ -24,7 +24,9 @@ Al finalizar la clase, subimos lo que trabajamos repitiendo los pasos
 
 En casa, para seguir trabajando, clonamos el repo:
 
-- `git clone https://github.com/miusuario/mirepositorio.git` -> bajan el repo
+- `git clone https://github.com/miusuario/mirepositorio.git` -> bajan el repo una vez
+- `git config user.name miusuario` -> identificarse
+- `git config user.email miemail@mail.com` -> identificarse
 
 Si ya lo bajaron, siempre verifiquen si están actualizadxs:
 
