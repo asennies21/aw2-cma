@@ -39,6 +39,9 @@ const app =  http.createServer(async (peticion, respuesta) => {//<--- se va a ej
             try{
                 await fsp.writeFile(path.join('./datosapi.txt'),datosApi)
                 respuesta.statusCode = 201
+
+
+                respuesta.setHeader('content-type','application/json')
                 return respuesta.end('datos guardados')
             }catch(error){
                 respuesta.statusCode = 500
