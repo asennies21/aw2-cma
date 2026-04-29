@@ -9,7 +9,7 @@ const productos = [
         precio: 20000
     },
     {
-        id:2,
+        id: 2,
         nombre: "Pantalon",
         precio: 30000
     }
@@ -32,7 +32,6 @@ const peticionGetEnRaiz = (req, res) => {
 app.get('/', peticionGetEnRaiz)
 
 app.get('/productos', (req, res) => {
-
     res.json(productos)
 
     // res.end(JSON.stringify(productos))
@@ -40,12 +39,22 @@ app.get('/productos', (req, res) => {
     // res.end('[{"nombre":"Camiseta", "precio":20000}]')
 
 })
+// /productos/1
 app.get('/productos/:id', (req, res) => {
 
+    // TIPO DE DATOS
     const id = parseInt(req.params.id)
+
+    // req = {
+    //     // Express agrega la propiedad params -> agrega a params -> las propiedades que vienen en el parametro
+    //     params : {
+    //         id_producto: 1
+    //     }
+    // }
+
     console.log(id)
     // Filtrar
-    const arregloFiltrado = productos.filter((producto)=>{
+    const arregloFiltrado = productos.filter((producto) => {
         return producto.id === id
     })
 
@@ -58,7 +67,7 @@ app.post('/productos', (req, res) => {
 
     const producto = req.body
     productos.push(producto)
-    res.status(201).json({mensaje:'Producto creado'})
+    res.status(201).json({ mensaje: 'Producto creado' })
 })
 
 
