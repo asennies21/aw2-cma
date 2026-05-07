@@ -1,0 +1,16 @@
+{
+  "name": "aw2-cma",
+  "version": "1.0.0",
+  "description": "- `git init` -> solo la primera vez\r - `git config user.name miusuario` -> la primera vez\r - `git config user.email miemail@mail.com` -> la primera vez\r - `git remote add origin https://github.com/miusuario/mirepositorio.git` -> configurar repo remoto\r - Creamos un README.md\r - `git status` -> para ver estado de seguimiento -> README.md aparece en rojo \r - `git add .` o `git add ruta/nombreDeArchivo` -> para marcar los archivos para guardar en repositorio.\r - `git status` -> nuevamente para verificar si README.md está listo (staged) aparece en verde\r - `git commit -m \"primer commit\"` -> Primer comit. Guardamos el seguimiento en local. \r - `git branch` -> vemos si la rama es main, si es master, cambiamos el nombre como sigue:\r - `git branch -M main ` -> cambiamos nombre de rama a main\r - `git push -u origin main` -> subimos al repositorio remoto",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --watch index.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "express": "5.2.1"
+  }
+}
