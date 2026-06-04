@@ -3,10 +3,9 @@ import multer from 'multer'
 // https://www.npmjs.com/package/nanoid
 import { nanoid } from 'nanoid'
 // https://www.npmjs.com/package/mime-type
-import { MimeType } from 'mime-type'
+import mime from 'mime-types'
 
 // -----------
-const mime = new MimeType()
 // path
 const PUERTO = 3000
 
