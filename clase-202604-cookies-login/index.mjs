@@ -42,7 +42,6 @@ app.post('/autenticacion', (req, res)=>{
     //const id = nanoid()
     // id lo guardan en algun lugar -> BD
 
-
     res.cookie('sesionId','minumerodesesion',{
         signed: true,
         httpOnly: true,
