@@ -65,7 +65,8 @@ app.post('/autenticar', (req, res) => {
     // Implementar -> Comprobar usuarios en BD
     if (true) {
         jwt.sign(datosPayload, process.env.FIRMA_JWT, { expiresIn: '1h' }, (error, token) => {
-            if (error) return console.log(error); res.redirect('/login')
+            
+            if (error) return res.redirect('/login')
 
             // Enviar token via cookie
             res.cookie('token', token, {
@@ -74,7 +75,7 @@ app.post('/autenticar', (req, res) => {
                 secure: true,
                 signed: true
             })
-
+            console.log(token)
             return res.redirect('/admin')
 
             // console.log(token)
